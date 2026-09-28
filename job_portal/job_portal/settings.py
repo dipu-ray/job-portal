@@ -37,10 +37,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Third Party Packages
+    'rest_framework',
+    'corsheaders',
+
+    # Personal App
     'accounts',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -128,3 +135,8 @@ MAILERS = {
 }
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# Allow CORS permission to connect with the frontend
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
