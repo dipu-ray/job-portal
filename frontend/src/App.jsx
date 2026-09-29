@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import MainLayout from './layouts/MainLayout'
+import Home from './pages/Home'
+import Jobs from './pages/Jobs'
+import Login from './pages/Login'
+import Register from './pages/Register'
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold text-blue-600 text-center mt-10">
-      Tailwind Kaj Korche!
-    </h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="jobs" element={<Jobs />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
