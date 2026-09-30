@@ -4,6 +4,9 @@ import Home from './pages/Home'
 import Jobs from './pages/Jobs'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import SeekerDashboard from './pages/SeekerDashboard'
+import RecruiterDashboard from './pages/RecruiterDashboard'
+import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
   return (
@@ -14,6 +17,22 @@ function App() {
           <Route path="jobs" element={<Jobs />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route
+            path="dashboard/seeker"
+            element={
+              <ProtectedRoute allowedRole="Seeker">
+                <SeekerDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="dashboard/recruiter"
+            element={
+              <ProtectedRoute allowedRole="Recruiter">
+                <RecruiterDashboard />
+              </ProtectedRoute>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>
