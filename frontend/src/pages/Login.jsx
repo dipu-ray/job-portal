@@ -1,17 +1,34 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 function Login() {
     const [formData, setFormData] = useState({ username: '', password: '' })
+    const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
+    const { login } = useAuth()
+    const navigate = useNavigate()
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        // Phase 4: There will call to real API
-        console.log('Login data:', formData)
+        setError('')
+        setLoading(true)
+        try {
+            const user = await login(formData.username, formData.password)
+            if (user.role === 'Recruiter') {
+                navigate('/dashboard/recruiter')
+            } else {
+                navigate('/dashboard/seeker')
+            }
+        } catch (err) {
+            setError('Incorrect username or password. Please check and try again.')
+        } finally {
+            setLoading(false)
+        }
     }
 
     return (
@@ -20,6 +37,12 @@ function Login() {
                 <h2 className="text-2xl font-bold text-center text-gray-900 mb-6">
                     Login
                 </h2>
+
+                {error && (
+                    <div className="bg-red-50 text-red-600 text-sm px-4 py-2 rounded-lg mb-4">
+                        {error}
+                    </div>
+                )}
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
@@ -32,7 +55,6 @@ function Login() {
                             value={formData.username}
                             onChange={handleChange}
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                            placeholder="tomar_username"
                             required
                         />
                     </div>
@@ -47,16 +69,16 @@ function Login() {
                             value={formData.password}
                             onChange={handleChange}
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                            placeholder="••••••••"
                             required
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="w-full bg-indigo-600 text-white py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition"
+                        disabled={loading}
+                        className="w-full bg-indigo-600 text-white py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition disabled:opacity-50"
                     >
-                        Login
+                        {loading ? 'Login ongoing...' : 'Login'}
                     </button>
                 </form>
 
