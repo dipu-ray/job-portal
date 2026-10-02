@@ -1,8 +1,3 @@
-<!-- # 💼 Job Portal
-
-Started: September 26, 2026
-Last Update: October 2, 2026 -->
-
 <div align="center">
 
 # 💼 Job Portal
@@ -22,3 +17,12 @@ Last Update: October 2, 2026 -->
 ![GitHub stars](https://img.shields.io/github/stars/dipu-ray/job-portal?style=flat-square&color=6366F1)
 
 </div>
+
+---
+
+## 📋 Project Timeline
+
+| Status              | Date               |
+| ------------------- | ------------------ |
+| 🚀 **Started**      | September 26, 2026 |
+| 🔄 **Last Updated** | October 2, 2026    |
