@@ -1,10 +1,42 @@
+# Environments
 env/
+venv/
+ENV/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python / Django
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 db.sqlite3
 media/
-.env
+*.log
+
+# Node / Frontend
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# Build / Outputs
 dist/
-frontend/node_modules/
-frontend/dist/
+build/
+out/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
