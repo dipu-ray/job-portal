@@ -25,7 +25,7 @@
 | Status              | Date               |
 | ------------------- | ------------------ |
 | 🚀 **Started**      | September 26, 2026 |
-| 🔄 **Last Updated** | October 3, 2026    |
+| 🔄 **Last Updated** | October 15, 2026    |
 
 ---
 
@@ -143,12 +143,6 @@ npm run dev
 
 ---
 
-## 📸 Screenshots
-
-> _Add your project screenshots here once UI is finalized_
-
----
-
 ## 🧭 Roadmap
 
 - [x] Phase 1: Backend & Database Setup
@@ -156,7 +150,6 @@ npm run dev
 - [x] Phase 3: Frontend Setup & Design
 - [x] Phase 4: Frontend-Backend Integration
 - [x] Phase 5: Testing, Bug Fixing & Final Touches
-- [ ] Deployment (Render / Vercel)
 
 ---
 
@@ -174,29 +167,6 @@ npm run dev
 
 <div align="center">
 
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
-⭐ **If you like this project, give it a star!** ⭐
 ⭐ **If you like this project, give it a star!** ⭐
 
 </div>
