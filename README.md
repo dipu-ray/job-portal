@@ -25,7 +25,17 @@
 | Status              | Date               |
 | ------------------- | ------------------ |
 | 🚀 **Started**      | September 26, 2026 |
-| 🔄 **Last Updated** | October 15, 2026    |
+| 🔄 **Last Updated** | October 22, 2026   |
+
+---
+
+## 📸 Interface Preview
+
+Here is a visual overview of the core application screens:
+
+|                           💼 Job Board / Dashboard                           |                           🔐 Login Screen                            |                            📝 Sign Up Screen                            |
+| :--------------------------------------------------------------------------: | :------------------------------------------------------------------: | :---------------------------------------------------------------------: |
+| <img src="./assets/preview/jobs.png" width="100%" alt="Jobs Dashboard View"> | <img src="./assets/preview/login.png" width="100%" alt="Login View"> | <img src="./assets/preview/signup.png" width="100%" alt="Sign Up View"> |
 
 ---
 
